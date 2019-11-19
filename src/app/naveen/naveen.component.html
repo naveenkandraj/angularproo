@@ -1,0 +1,12 @@
+<p [ngStyle]="{backgroundColor : getColor()}"><b>{{'Server'}}</b> id is <b>{{serverId}}</b> status is <b>{{serverstatus}}</b></p>
+<input
+type="text"
+class="form-control"
+[(ngModel)]="serverName"/>
+<button
+ class="btn btn-primary"
+ [disabled]="!allowNewServer"
+ (click)="onCreateServer()">add server</button>
+<h1 *ngIf="server_Status">{{serverName}}</h1>
+
+<h1>{{serveradd}}</h1>
